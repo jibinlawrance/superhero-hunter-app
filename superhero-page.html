@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Hunter App</title>
+
+    <!-- add tailwind requisites -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>    
+    <!-- add tailwind requisites -->
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/superhero.css">
+</head>
+<body>
+
+  <nav class="
+  relative
+  flex flex-wrap
+  items-center
+  justify-between
+  py-4
+  bg-gray-100
+  text-gray-500
+  hover:text-gray-700
+  focus:text-gray-700
+  shadow-lg
+  navbar navbar-expand-md navbar-light
+  ">
+  <div class="container-fluid w-[80rem] mx-auto flex flex-wrap items-center justify-between px-4">
+  <button class="
+      navbar-toggler
+      text-gray-500
+      border-0
+      hover:shadow-none hover:no-underline
+      py-2
+      px-2.5
+      bg-transparent
+      focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
+    " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
+    class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+    <path fill="currentColor"
+      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+    </path>
+  </svg>
+  </button>
+  <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
+  <a class="text-xl text-black" href="./index.html">Superhero Hunter</a>
+  <!-- Left links -->
+  <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+    <li class="nav-item px-2 pl-4">
+      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700" aria-current="page" href="./index.html">Home</a>
+    </li>
+    <li class="nav-item pr-2">
+      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="./favourites.html">Favourites</a>
+    </li>
+  </ul>
+  <!-- Left links -->
+
+  <!-- Search bar -->
+  <div class="flex justify-center" style="visibility: hidden;">
+    <div class="xl:w-96">
+      <input
+        oninput="filterList(this)"
+        type="search"
+        class="
+          form-control
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        "
+        id="inputSearch"
+        placeholder="Serach Superhero"
+      />
+    </div>
+  </div>
+  <!-- Search bar -->
+
+  </div>
+  <!-- Collapsible wrapper -->
+  </div>
+  </nav>
+
+  <div class="character-wrap max-w-7xl mx-auto px-4">
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+  <script src="./js/superhero.js"></script>
+</body>
+</html>

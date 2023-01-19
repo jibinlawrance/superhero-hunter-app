@@ -1,0 +1,62 @@
+.character-wrap h2 {
+    font-weight: bold;
+    margin: 45px 0px 25px;
+    color: #be2633;
+    letter-spacing: 1px;
+    font-family: monospace;
+    font-size: 1.5rem;
+}
+
+.character-header {
+    background-color: #e12835;
+    background-image: radial-gradient(#e12835 20%, #be2633 100%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.common-wrap {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.series-wrap {
+    grid-template-columns: repeat(6,1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .common-wrap {
+        grid-template-columns: repeat(4,1fr);
+    }    
+}
+
+@media screen and (max-width: 568px) {
+    .common-wrap {
+        grid-template-columns: repeat(3,1fr);
+    }    
+}
+
+@media screen and (max-width: 480px) {
+    .common-wrap {
+        grid-template-columns: repeat(2,1fr);
+    }    
+}
+
+.series-wrap p { display: none; }
+
+.common-wrap > div {
+    margin-bottom: 30px;
+}
+
+.common-wrap img {
+    margin-bottom: 20px;
+    box-shadow: 0 26px 24px -16px rgb(0 0 0 / 40%);
+    transition: all .17s ease-in-out;
+}
+
+.common-wrap img:hover {
+    transform: translate3d(0,-10px,0);
+}
+
+.common-wrap h5 {
+    font-weight: bold;
+    font-size: 14px;
+}

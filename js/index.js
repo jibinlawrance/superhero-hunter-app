@@ -1,7 +1,5 @@
 const cardWrapper = document.querySelector('.card-wrapper');
 const input = document.querySelector('#inputSearch');
-const navButton = document.querySelector('[data-bs-target="#navbarSupportedContent"]');
-const mobileNav = document.querySelector('.navbar-nav');
 
 let favList = [];
 
@@ -18,11 +16,6 @@ async function getCharacters() {
   var parsedResponse = await response.json();
   return parsedResponse;
 }
-
-// mobile navbar
-navButton.addEventListener('click', ()=>(
-  mobileNav.classList.toggle('hidden')
-))
 
 getCharacters().then(res => {
   let result = res.data.results;

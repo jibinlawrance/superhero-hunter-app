@@ -3,7 +3,6 @@ const input = document.querySelector('#inputSearch');
 
 if(localStorage.getItem('fav-list')){
     favList = JSON.parse(localStorage.getItem('fav-list'));
-    console.log(favList);
     favList.forEach(id => fetchData(id));
 }else{
     cardWrapper.innerHTML = `<h2>Go add some superheros in your favourites!</h2>` 
@@ -21,12 +20,9 @@ function fetchData(id){
   getCharacters().then(res => {
       let result = res.data.results;
   
-      // console.log(result);
-      
       result.forEach(element => {
           let li = document.createElement('li');
           let cardContent = createCardTemplate(element);
-          // console.log(cardContent);
           li.innerHTML = cardContent;
           cardWrapper.append(li);
       });
@@ -54,7 +50,6 @@ function fetchCharacter(e,id) {
 }
 
 function filterList(input){
-  // console.log(input.value);
   let liList = cardWrapper.querySelectorAll('li');
   liList.forEach(element => {
     let listName = element.querySelector('.charName').innerText.toLowerCase();

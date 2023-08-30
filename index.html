@@ -47,14 +47,16 @@
     shadow-lg
     navbar navbar-expand-md navbar-light
     ">
-  <div class="container-fluid w-[80rem] mx-auto flex flex-wrap items-center justify-between px-4">
+  <div class="container-fluid w-[80rem] mx-auto flex flex-wrap items-start md:items-center justify-between px-4">
   <button class="
+      md:hidden
       navbar-toggler
       text-gray-500
       border-0
       hover:shadow-none hover:no-underline
-      py-2
-      px-2.5
+      m-2
+      ml-0
+      mt-0
       bg-transparent
       focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
       " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -66,10 +68,10 @@
         </path>
       </svg>
   </button>
-  <div class="collapse navbar-collapse flex-grow items-center" id="navbarSupportedContent">
+  <div class="navbar-collapse flex flex-grow items-center" id="navbarSupportedContent">
     <a class="text-xl text-black" href="./index.html">Superhero Hunter</a>
     <!-- Left links -->
-    <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+    <ul class="navbar-nav flex flex-col md:flex-row pl-0 list-style-none mr-auto">
       <li class="nav-item px-2 pl-4">
         <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
       </li>
@@ -82,7 +84,7 @@
   <!-- Collapsible wrapper -->
 
   <!-- Search bar -->
-  <div class="w-[calc(98%-50px)] md:w-96 flex justify-center">
+  <div class="w-full md:w-96 flex justify-center">
     <div class="w-full">
       <input
         oninput="filterList(this)"

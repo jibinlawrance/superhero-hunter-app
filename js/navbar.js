@@ -15,8 +15,12 @@ function handleWindowResize() {
   // Check if the window width is 768px or higher
   if (windowWidth >= 768) {
     mobileNav.classList.remove("hidden");
+}else{
+    mobileNav.classList.add("hidden");
   }
 }
 
 // Attach the event listener to the window's resize event
 window.addEventListener("resize", handleWindowResize);
+
+handleWindowResize();
